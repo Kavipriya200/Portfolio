@@ -1,0 +1,45 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600&display=swap");
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+html {
+  @apply font-Poppins scroll-smooth;
+}
+
+body {
+  /* Applying pink background and gray text */
+  @apply box-border bg-pink-500 text-gray-100;
+}
+
+/* Button style with cyan background and white text */
+.btn-primary {
+  @apply bg-cyan-600 font-semibold text-white md:mx-0 mx-auto rounded-full py-3 px-6 flex items-center gap-2;
+}
+
+/* Style for the about image with background and rotated effect */
+.aboutImg::after {
+  @apply content-[''] w-full left-0 top-0 rounded-xl rotate-12 h-full absolute bg-gray-600 -z-10;
+}
+
+/* Swiper pagination bullet style */
+.swiper-pagination-bullet {
+  @apply bg-white; /* This can stay white for contrast */
+}
+
+/* Input and textarea styles */
+input,
+textarea {
+  @apply bg-gray-800 outline-none rounded-lg p-3 text-white; /* Darker background and light text */
+}
+
+/* Placeholder styles */
+input::placeholder,
+textarea::placeholder {
+  @apply text-white; /* Light gray for placeholder text */
+}
+
+/* Text selection color */
+::selection {
+  @apply bg-cyan-600 text-white; /* Cyan background with white text for selection */
+}
